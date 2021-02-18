@@ -29,7 +29,7 @@ library PokerRound
  }
 
  
- function payIn(PlayerMapping.Player[] memory self, uint8 position, uint256 amount, BiddingState memory _biddingState) public returns(uint256)
+ function payIn(PlayerMapping.Player[] memory self, uint8 position, uint256 amount, BiddingState memory _biddingState) public pure returns(uint256)
  {
      require(self[position].currentBalance > amount, "not enough funds in wallet");
      self[position].currentBalance -= amount;

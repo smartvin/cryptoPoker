@@ -74,7 +74,7 @@ contract table
         (n, tablePlayers) = serialize(activePlayers);
        }
        playPreFlop(tablePlayers, button, bb);
-       playPostFlop(tablePlayers, button, bb);
+       playPostFlop(tablePlayers, button);
        /*
         * remove players from the array who have left the game
         * cash out each leaving player and rebuild activePlayers;
@@ -88,11 +88,9 @@ contract table
     {
         PokerRound.BiddingState memory biddingState;
         uint256 amountWithdrawn;
-        bool continueBetting;
         uint8 noOfPlayers;
         uint8 currentPlayerIndex;
-        PokerRound.action playerAction;
-
+   
         noOfPlayers = uint8(players.length);
         require(noOfPlayers > 2, "heads up is a on another table");
         biddingState.noOfCurrentPlayers =  noOfPlayers;
@@ -106,13 +104,12 @@ contract table
         return(true);  
     }
 
-    function playPostFlop(PlayerMapping.Player[] memory players, uint8 _button, uint256 _bb) public returns(bool)
+    function playPostFlop(PlayerMapping.Player[] memory players, uint8 _button) public returns(bool)
     {  
      PokerRound.BiddingState memory biddingState;
-     bool continueBetting;
      uint8 noOfPlayers;
      uint8 currentPlayerIndex;
-     PokerRound.action playerAction;
+     uint8 folded;
      uint8 r;
 
      noOfPlayers = uint8(players.length);
@@ -121,8 +118,30 @@ contract table
      
      for ( r = 1; r < 4; r++) // 4 rounds: FLOP, TURN, RIVER. PRE-FLOP is handled separately as betting starts with UG
      {
+         playOneRound(players, _button, currentPlayerIndex);
+         if (folded > 0)
+         {
+             // noOfPlayers = players.prune();
+         }
+
+     } // while r < RIVER
+     return (true);
+    } // playGame
+
+    function playOneRound(PlayerMapping.Player[] memory players, uint8 _button, uint8 currentPlayerIndex) 
+        public returns(uint8)
+    {
+      PokerRound.action playerAction;
+      uint8 noOfPlayers;
+      uint8 folded;
+      PokerRound.BiddingState memory biddingState;
+      bool continueBetting = false;
+  
       biddingState.firstBet = true; // first Bet in this betting round.
       biddingState.currentBet = 0;
+      noOfPlayers = uint8(players.length);
+      biddingState.noOfCurrentPlayers =  noOfPlayers;
+
         /*
         * we stop playing 
             - once the last player who has raised or bet calls or checks
@@ -147,6 +166,7 @@ contract table
              if (playerAction == PokerRound.action.fold)
              {
                 players[i].folded = true;
+                folded++;
              }
              else
              {
@@ -181,14 +201,11 @@ contract table
                 continueBetting = false;
              }
             } 
-
         } // for i < noOfPlayers
       }
-     } // while r < RIVER
-     return (true);
-    } // playGame
+      return(folded);
+    }
 
- 
     function joinTable (uint256 _amount) external payable
     {
         PlayerMapping.Player memory newPlayer;

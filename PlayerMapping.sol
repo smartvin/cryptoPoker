@@ -37,6 +37,7 @@ struct arrayOfPlayers
 }
 
 
+    function 
     function leaveTable(PlayerMapping.Players storage _activePlayers) internal returns(uint)
     {
         uint length;
@@ -99,7 +100,7 @@ struct arrayOfPlayers
         return (true, self.playerByAddress[key].player);
     }
 
-    function getNextActivePlayer(Player[] memory players, uint8 currentPlayer) internal view returns(int)
+    function getNextActivePlayer(Player[] memory players, uint8 currentPlayer) internal pure returns(int)
     {
         uint8 noOfPlayers = uint8(players.length);
         uint8 currentPlayerIndex;
