@@ -7,7 +7,9 @@ pragma experimental ABIEncoderV2;
 import "./PlayerMapping.sol";
 import "./poker.onebiddinground.sol";
 
-
+/*
+* My 6-player Texas Holdem for Ethereum
+*/
 contract table
 {
     using PokerRound for PlayerMapping.Player[];
@@ -71,11 +73,8 @@ contract table
         noOfActivePlayers = uint8(append(activePlayers, waitingPlayers));
         (n, tablePlayers) = serialize(activePlayers);
        }
-       if ( noOfActivePlayers > 2)
-       {
-        playPreFlop(tablePlayers, button, bb);
-        playPostFlop(tablePlayers, button, bb);
-       }
+       playPreFlop(tablePlayers, button, bb);
+       playPostFlop(tablePlayers, button, bb);
        /*
         * remove players from the array who have left the game
         * cash out each leaving player and rebuild activePlayers;
@@ -87,6 +86,23 @@ contract table
     
     function playPreFlop(PlayerMapping.Player[] memory players, uint8 _button, uint256 _bb) public returns(bool)
     {
+        PokerRound.BiddingState memory biddingState;
+        uint256 amountWithdrawn;
+        bool continueBetting;
+        uint8 noOfPlayers;
+        uint8 currentPlayerIndex;
+        PokerRound.action playerAction;
+
+        noOfPlayers = uint8(players.length);
+        require(noOfPlayers > 2, "heads up is a on another table");
+        biddingState.noOfCurrentPlayers =  noOfPlayers;
+        amountWithdrawn = PokerRound.payIn(players, _button+1, _bb/2, biddingState);
+        require(amountWithdrawn == _bb/2, "couldnt payIn sb");
+        amountWithdrawn = PokerRound.payIn(players, _button+2 % noOfPlayers, _bb, biddingState);
+        require(amountWithdrawn == _bb, "couldnt payIn bb");
+        currentPlayerIndex = _button + 2;
+        biddingState.streetState = PokerRound.PREFLOP;
+        
         return(true);  
     }
 
@@ -97,36 +113,26 @@ contract table
      uint8 noOfPlayers;
      uint8 currentPlayerIndex;
      PokerRound.action playerAction;
-     uint256 amountWithdrawn;
      uint8 r;
 
      noOfPlayers = uint8(players.length);
      biddingState.noOfCurrentPlayers =  noOfPlayers;
      currentPlayerIndex = _button;
-     /*
-     this is for the special function playPreflop
-
-     amountWithdrawn = PokerRound.payIn(players, _button+1, _bb/2, biddingState);
-     require(amountWithdrawn == _bb/2, "couldnt payIn sb");
-     amountWithdrawn = PokerRound.payIn(players, _button+2 % noOfPlayers, _bb, biddingState);
-     require(amountWithdrawn == _bb/2, "couldnt payIn bb");
-     biddingState.streetState = PokerRound.PREFLOP;
-
-     */
+     
      for ( r = 1; r < 4; r++) // 4 rounds: FLOP, TURN, RIVER. PRE-FLOP is handled separately as betting starts with UG
      {
       biddingState.firstBet = true; // first Bet in this betting round.
       biddingState.currentBet = 0;
-      while(continueBetting == true) // bet within the current round until we reach final call
-      {
-        uint256 betSize;
-        biddingState.lastRaisedOrBet = button;
         /*
         * we stop playing 
             - once the last player who has raised or bet calls or checks
             - the round has been traversed at least once
-            - this is why we assign lastRaisedOrBet to button
+            - this is why we assign lastRaisedOrBet to button: once button is active we have done at least one full round
         */
+      biddingState.lastRaisedOrBet = button;
+      while(continueBetting == true) // bet within the current round until we reach final call
+      {
+        uint256 betSize;
         for(uint8 i = _button + 1; i < (noOfPlayers + _button + 1);i++) // go from sb to button 
         {
             currentPlayerIndex = i % noOfPlayers;
@@ -162,11 +168,19 @@ contract table
             /*
             * this is the core condition to determine whether we can end the round and move to the next stage
             */
-            if((biddingState.lastRaisedOrBet == (i + 1) % noOfPlayers) && (playerAction != PokerRound.action.raise)
-                && (playerAction != PokerRound.action.bet) )
+            int _nextActivePlayer = PlayerMapping.getNextActivePlayer(players, i);
+            if( _nextActivePlayer < 0)
             {
                 continueBetting = false;
             }
+            else
+            {
+             if((biddingState.lastRaisedOrBet == _nextActivePlayer) && (playerAction != PokerRound.action.raise)
+                && (playerAction != PokerRound.action.bet) )
+             {
+                continueBetting = false;
+             }
+            } 
 
         } // for i < noOfPlayers
       }
