@@ -1,0 +1,2054 @@
+{
+    "contractName": "PokerRound",
+    "abi": [],
+    "metadata": "{\"compiler\":{\"version\":\"0.7.4+commit.3f05b770\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/behrens/Documents/Blockchain/dev/src/poker/poker.onebiddinground.sol\":\"PokerRound\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/behrens/Documents/Blockchain/dev/src/poker/poker.onebiddinground.sol\":{\"keccak256\":\"0x3a926de2ce69b063ddbafd5a5930b37e6ab6088a9602f37b360afd0b3fa9031f\",\"license\":\"Apache-2.0\",\"urls\":[\"bzz-raw://1f924df4fc78c7aa6e6444a1db113d3b3405cfdd86213f0b1ba8095dc3f28ad7\",\"dweb:/ipfs/QmPVq6tcTytSNh6Z5Ym4fj45B1G7HiEa3vzSwcWX3zYLSL\"]}},\"version\":1}",
+    "bytecode": "610134610026600b82828239805160001a60731461001957fe5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c8063e70a049d146038575b600080fd5b818015604357600080fd5b506053604f3660046088565b6067565b604051605e919060f3565b60405180910390f35b600081815b818160ff161015607d57600101606c565b506001949350505050565b600080602083850312156099578182fd5b823567ffffffffffffffff8082111560af578384fd5b818501915085601f83011260c1578384fd5b81358181111560ce578485fd5b86602060808302850101111560e1578485fd5b60209290920196919550909350505050565b90151581526020019056fea2646970667358221220e614d8087b4eae96d9f4f29e151d29b468e5da74460211beaada3cafa6db722364736f6c63430007040033",
+    "deployedBytecode": "730000000000000000000000000000000000000000301460806040526004361060335760003560e01c8063e70a049d146038575b600080fd5b818015604357600080fd5b506053604f3660046088565b6067565b604051605e919060f3565b60405180910390f35b600081815b818160ff161015607d57600101606c565b506001949350505050565b600080602083850312156099578182fd5b823567ffffffffffffffff8082111560af578384fd5b818501915085601f83011260c1578384fd5b81358181111560ce578485fd5b86602060808302850101111560e1578485fd5b60209290920196919550909350505050565b90151581526020019056fea2646970667358221220e614d8087b4eae96d9f4f29e151d29b468e5da74460211beaada3cafa6db722364736f6c63430007040033",
+    "sourceMap": "98:1769:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "98:1769:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;1669:196;;;;;;;;;;-1:-1:-1;1669:196:0;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;1730:4;1763:7;1730:4;1798:44;1812:11;1808:1;:15;;;1798:44;;;1825:3;;1798:44;;;-1:-1:-1;1856:4:0;;1669:196;-1:-1:-1;;;;1669:196:0:o;14:692:1:-;;;185:2;173:9;164:7;160:23;156:32;153:2;;;206:6;198;191:22;153:2;251:9;238:23;280:18;321:2;313:6;310:14;307:2;;;342:6;334;327:22;307:2;385:6;374:9;370:22;360:32;;430:7;423:4;419:2;415:13;411:27;401:2;;457:6;449;442:22;401:2;502;489:16;528:2;520:6;517:14;514:2;;;549:6;541;534:22;514:2;610:7;605:2;597:4;589:6;585:17;581:2;577:26;573:35;570:48;567:2;;;636:6;628;621:22;567:2;672;664:11;;;;;694:6;;-1:-1:-1;143:563:1;;-1:-1:-1;;;;143:563:1:o;711:195::-;884:14;;877:22;859:41;;847:2;832:18;;814:92::o",
+    "sourcePath": "/Users/behrens/Documents/Blockchain/dev/src/poker/poker.onebiddinground.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.7.4+commit.3f05b770"
+    },
+    "ast": {
+        "absolutePath": "/Users/behrens/Documents/Blockchain/dev/src/poker/poker.onebiddinground.sol",
+        "exportedSymbols": {
+            "PokerRound": [
+                177
+            ]
+        },
+        "id": 178,
+        "license": "Apache-2.0",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    ">=",
+                    "0.6"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "40:22:0"
+            },
+            {
+                "id": 2,
+                "literals": [
+                    "experimental",
+                    "ABIEncoderV2"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "63:33:0"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "library",
+                "fullyImplemented": true,
+                "id": 177,
+                "linearizedBaseContracts": [
+                    177
+                ],
+                "name": "PokerRound",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "canonicalName": "PokerRound.street",
+                        "id": 7,
+                        "members": [
+                            {
+                                "id": 3,
+                                "name": "preflop",
+                                "nodeType": "EnumValue",
+                                "src": "134:7:0"
+                            },
+                            {
+                                "id": 4,
+                                "name": "flop",
+                                "nodeType": "EnumValue",
+                                "src": "143:4:0"
+                            },
+                            {
+                                "id": 5,
+                                "name": "turn",
+                                "nodeType": "EnumValue",
+                                "src": "149:4:0"
+                            },
+                            {
+                                "id": 6,
+                                "name": "river",
+                                "nodeType": "EnumValue",
+                                "src": "155:5:0"
+                            }
+                        ],
+                        "name": "street",
+                        "nodeType": "EnumDefinition",
+                        "src": "121:40:0"
+                    },
+                    {
+                        "canonicalName": "PokerRound.action",
+                        "id": 12,
+                        "members": [
+                            {
+                                "id": 8,
+                                "name": "check",
+                                "nodeType": "EnumValue",
+                                "src": "179:5:0"
+                            },
+                            {
+                                "id": 9,
+                                "name": "fold",
+                                "nodeType": "EnumValue",
+                                "src": "186:4:0"
+                            },
+                            {
+                                "id": 10,
+                                "name": "bet",
+                                "nodeType": "EnumValue",
+                                "src": "192:3:0"
+                            },
+                            {
+                                "id": 11,
+                                "name": "raise",
+                                "nodeType": "EnumValue",
+                                "src": "197:5:0"
+                            }
+                        ],
+                        "name": "action",
+                        "nodeType": "EnumDefinition",
+                        "src": "166:37:0"
+                    },
+                    {
+                        "canonicalName": "PokerRound.Player",
+                        "id": 21,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 14,
+                                "mutability": "mutable",
+                                "name": "currentBalance",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 21,
+                                "src": "234:22:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 13,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "234:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 16,
+                                "mutability": "mutable",
+                                "name": "folded",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 21,
+                                "src": "266:11:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_bool",
+                                    "typeString": "bool"
+                                },
+                                "typeName": {
+                                    "id": 15,
+                                    "name": "bool",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "266:4:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 18,
+                                "mutability": "mutable",
+                                "name": "active",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 21,
+                                "src": "287:11:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_bool",
+                                    "typeString": "bool"
+                                },
+                                "typeName": {
+                                    "id": 17,
+                                    "name": "bool",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "287:4:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 20,
+                                "mutability": "mutable",
+                                "name": "currentPosition",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 21,
+                                "src": "308:21:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint8",
+                                    "typeString": "uint8"
+                                },
+                                "typeName": {
+                                    "id": 19,
+                                    "name": "uint8",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "308:5:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint8",
+                                        "typeString": "uint8"
+                                    }
+                                },
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "Player",
+                        "nodeType": "StructDefinition",
+                        "scope": 177,
+                        "src": "206:131:0",
+                        "visibility": "public"
+                    },
+                    {
+                        "canonicalName": "PokerRound.BiddingState",
+                        "id": 40,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 23,
+                                "mutability": "mutable",
+                                "name": "streetState",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 40,
+                                "src": "368:18:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_enum$_street_$7",
+                                    "typeString": "enum PokerRound.street"
+                                },
+                                "typeName": {
+                                    "id": 22,
+                                    "name": "street",
+                                    "nodeType": "UserDefinedTypeName",
+                                    "referencedDeclaration": 7,
+                                    "src": "368:6:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_enum$_street_$7",
+                                        "typeString": "enum PokerRound.street"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 25,
+                                "mutability": "mutable",
+                                "name": "noOfCurrentPlayers",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 40,
+                                "src": "392:24:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint8",
+                                    "typeString": "uint8"
+                                },
+                                "typeName": {
+                                    "id": 24,
+                                    "name": "uint8",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "392:5:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint8",
+                                        "typeString": "uint8"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 27,
+                                "mutability": "mutable",
+                                "name": "firstPlayer",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 40,
+                                "src": "422:17:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint8",
+                                    "typeString": "uint8"
+                                },
+                                "typeName": {
+                                    "id": 26,
+                                    "name": "uint8",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "422:5:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint8",
+                                        "typeString": "uint8"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 29,
+                                "mutability": "mutable",
+                                "name": "currentPlayer",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 40,
+                                "src": "445:19:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint8",
+                                    "typeString": "uint8"
+                                },
+                                "typeName": {
+                                    "id": 28,
+                                    "name": "uint8",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "445:5:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint8",
+                                        "typeString": "uint8"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 31,
+                                "mutability": "mutable",
+                                "name": "lastPlayer",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 40,
+                                "src": "470:16:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint8",
+                                    "typeString": "uint8"
+                                },
+                                "typeName": {
+                                    "id": 30,
+                                    "name": "uint8",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "470:5:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint8",
+                                        "typeString": "uint8"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 33,
+                                "mutability": "mutable",
+                                "name": "button",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 40,
+                                "src": "492:12:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint8",
+                                    "typeString": "uint8"
+                                },
+                                "typeName": {
+                                    "id": 32,
+                                    "name": "uint8",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "492:5:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint8",
+                                        "typeString": "uint8"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 35,
+                                "mutability": "mutable",
+                                "name": "firstBet",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 40,
+                                "src": "510:13:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_bool",
+                                    "typeString": "bool"
+                                },
+                                "typeName": {
+                                    "id": 34,
+                                    "name": "bool",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "510:4:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 37,
+                                "mutability": "mutable",
+                                "name": "currentBet",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 40,
+                                "src": "529:18:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 36,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "529:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 39,
+                                "mutability": "mutable",
+                                "name": "potSize",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 40,
+                                "src": "553:15:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 38,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "553:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "BiddingState",
+                        "nodeType": "StructDefinition",
+                        "scope": 177,
+                        "src": "341:232:0",
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 99,
+                            "nodeType": "Block",
+                            "src": "671:637:0",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        50
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 50,
+                                            "mutability": "mutable",
+                                            "name": "betSize",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 99,
+                                            "src": "677:15:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 49,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "677:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 51,
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "677:15:0"
+                                },
+                                {
+                                    "condition": {
+                                        "commonType": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        },
+                                        "id": 55,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftExpression": {
+                                            "expression": {
+                                                "id": 52,
+                                                "name": "state",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 44,
+                                                "src": "761:5:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_BiddingState_$40_memory_ptr",
+                                                    "typeString": "struct PokerRound.BiddingState memory"
+                                                }
+                                            },
+                                            "id": 53,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "firstBet",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 35,
+                                            "src": "761:14:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bool",
+                                                "typeString": "bool"
+                                            }
+                                        },
+                                        "nodeType": "BinaryOperation",
+                                        "operator": "==",
+                                        "rightExpression": {
+                                            "hexValue": "74727565",
+                                            "id": 54,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "bool",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "779:4:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bool",
+                                                "typeString": "bool"
+                                            },
+                                            "value": "true"
+                                        },
+                                        "src": "761:22:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "falseBody": {
+                                        "id": 97,
+                                        "nodeType": "Block",
+                                        "src": "1068:237:0",
+                                        "statements": [
+                                            {
+                                                "condition": {
+                                                    "commonType": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    },
+                                                    "id": 79,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "leftExpression": {
+                                                        "id": 77,
+                                                        "name": "betSize",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 50,
+                                                        "src": "1125:7:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    },
+                                                    "nodeType": "BinaryOperation",
+                                                    "operator": "==",
+                                                    "rightExpression": {
+                                                        "hexValue": "30",
+                                                        "id": 78,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "kind": "number",
+                                                        "lValueRequested": false,
+                                                        "nodeType": "Literal",
+                                                        "src": "1136:1:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_rational_0_by_1",
+                                                            "typeString": "int_const 0"
+                                                        },
+                                                        "value": "0"
+                                                    },
+                                                    "src": "1125:12:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_bool",
+                                                        "typeString": "bool"
+                                                    }
+                                                },
+                                                "falseBody": {
+                                                    "id": 95,
+                                                    "nodeType": "Block",
+                                                    "src": "1213:86:0",
+                                                    "statements": [
+                                                        {
+                                                            "expression": {
+                                                                "id": 89,
+                                                                "isConstant": false,
+                                                                "isLValue": false,
+                                                                "isPure": false,
+                                                                "lValueRequested": false,
+                                                                "leftHandSide": {
+                                                                    "expression": {
+                                                                        "id": 85,
+                                                                        "name": "state",
+                                                                        "nodeType": "Identifier",
+                                                                        "overloadedDeclarations": [],
+                                                                        "referencedDeclaration": 44,
+                                                                        "src": "1227:5:0",
+                                                                        "typeDescriptions": {
+                                                                            "typeIdentifier": "t_struct$_BiddingState_$40_memory_ptr",
+                                                                            "typeString": "struct PokerRound.BiddingState memory"
+                                                                        }
+                                                                    },
+                                                                    "id": 87,
+                                                                    "isConstant": false,
+                                                                    "isLValue": true,
+                                                                    "isPure": false,
+                                                                    "lValueRequested": true,
+                                                                    "memberName": "currentBet",
+                                                                    "nodeType": "MemberAccess",
+                                                                    "referencedDeclaration": 37,
+                                                                    "src": "1227:16:0",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_uint256",
+                                                                        "typeString": "uint256"
+                                                                    }
+                                                                },
+                                                                "nodeType": "Assignment",
+                                                                "operator": "+=",
+                                                                "rightHandSide": {
+                                                                    "id": 88,
+                                                                    "name": "betSize",
+                                                                    "nodeType": "Identifier",
+                                                                    "overloadedDeclarations": [],
+                                                                    "referencedDeclaration": 50,
+                                                                    "src": "1247:7:0",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_uint256",
+                                                                        "typeString": "uint256"
+                                                                    }
+                                                                },
+                                                                "src": "1227:27:0",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_uint256",
+                                                                    "typeString": "uint256"
+                                                                }
+                                                            },
+                                                            "id": 90,
+                                                            "nodeType": "ExpressionStatement",
+                                                            "src": "1227:27:0"
+                                                        },
+                                                        {
+                                                            "expression": {
+                                                                "components": [
+                                                                    {
+                                                                        "expression": {
+                                                                            "id": 91,
+                                                                            "name": "action",
+                                                                            "nodeType": "Identifier",
+                                                                            "overloadedDeclarations": [],
+                                                                            "referencedDeclaration": 12,
+                                                                            "src": "1275:6:0",
+                                                                            "typeDescriptions": {
+                                                                                "typeIdentifier": "t_type$_t_enum$_action_$12_$",
+                                                                                "typeString": "type(enum PokerRound.action)"
+                                                                            }
+                                                                        },
+                                                                        "id": 92,
+                                                                        "isConstant": false,
+                                                                        "isLValue": false,
+                                                                        "isPure": true,
+                                                                        "lValueRequested": false,
+                                                                        "memberName": "raise",
+                                                                        "nodeType": "MemberAccess",
+                                                                        "src": "1275:12:0",
+                                                                        "typeDescriptions": {
+                                                                            "typeIdentifier": "t_enum$_action_$12",
+                                                                            "typeString": "enum PokerRound.action"
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "id": 93,
+                                                                "isConstant": false,
+                                                                "isInlineArray": false,
+                                                                "isLValue": false,
+                                                                "isPure": true,
+                                                                "lValueRequested": false,
+                                                                "nodeType": "TupleExpression",
+                                                                "src": "1274:14:0",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_enum$_action_$12",
+                                                                    "typeString": "enum PokerRound.action"
+                                                                }
+                                                            },
+                                                            "functionReturnParameters": 48,
+                                                            "id": 94,
+                                                            "nodeType": "Return",
+                                                            "src": "1268:20:0"
+                                                        }
+                                                    ]
+                                                },
+                                                "id": 96,
+                                                "nodeType": "IfStatement",
+                                                "src": "1122:177:0",
+                                                "trueBody": {
+                                                    "id": 84,
+                                                    "nodeType": "Block",
+                                                    "src": "1147:44:0",
+                                                    "statements": [
+                                                        {
+                                                            "expression": {
+                                                                "components": [
+                                                                    {
+                                                                        "expression": {
+                                                                            "id": 80,
+                                                                            "name": "action",
+                                                                            "nodeType": "Identifier",
+                                                                            "overloadedDeclarations": [],
+                                                                            "referencedDeclaration": 12,
+                                                                            "src": "1168:6:0",
+                                                                            "typeDescriptions": {
+                                                                                "typeIdentifier": "t_type$_t_enum$_action_$12_$",
+                                                                                "typeString": "type(enum PokerRound.action)"
+                                                                            }
+                                                                        },
+                                                                        "id": 81,
+                                                                        "isConstant": false,
+                                                                        "isLValue": false,
+                                                                        "isPure": true,
+                                                                        "lValueRequested": false,
+                                                                        "memberName": "fold",
+                                                                        "nodeType": "MemberAccess",
+                                                                        "src": "1168:11:0",
+                                                                        "typeDescriptions": {
+                                                                            "typeIdentifier": "t_enum$_action_$12",
+                                                                            "typeString": "enum PokerRound.action"
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "id": 82,
+                                                                "isConstant": false,
+                                                                "isInlineArray": false,
+                                                                "isLValue": false,
+                                                                "isPure": true,
+                                                                "lValueRequested": false,
+                                                                "nodeType": "TupleExpression",
+                                                                "src": "1167:13:0",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_enum$_action_$12",
+                                                                    "typeString": "enum PokerRound.action"
+                                                                }
+                                                            },
+                                                            "functionReturnParameters": 48,
+                                                            "id": 83,
+                                                            "nodeType": "Return",
+                                                            "src": "1161:19:0"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "id": 98,
+                                    "nodeType": "IfStatement",
+                                    "src": "758:547:0",
+                                    "trueBody": {
+                                        "id": 76,
+                                        "nodeType": "Block",
+                                        "src": "789:237:0",
+                                        "statements": [
+                                            {
+                                                "condition": {
+                                                    "commonType": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    },
+                                                    "id": 58,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "leftExpression": {
+                                                        "id": 56,
+                                                        "name": "betSize",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 50,
+                                                        "src": "846:7:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    },
+                                                    "nodeType": "BinaryOperation",
+                                                    "operator": "==",
+                                                    "rightExpression": {
+                                                        "hexValue": "30",
+                                                        "id": 57,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "kind": "number",
+                                                        "lValueRequested": false,
+                                                        "nodeType": "Literal",
+                                                        "src": "857:1:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_rational_0_by_1",
+                                                            "typeString": "int_const 0"
+                                                        },
+                                                        "value": "0"
+                                                    },
+                                                    "src": "846:12:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_bool",
+                                                        "typeString": "bool"
+                                                    }
+                                                },
+                                                "falseBody": {
+                                                    "id": 74,
+                                                    "nodeType": "Block",
+                                                    "src": "935:84:0",
+                                                    "statements": [
+                                                        {
+                                                            "expression": {
+                                                                "id": 68,
+                                                                "isConstant": false,
+                                                                "isLValue": false,
+                                                                "isPure": false,
+                                                                "lValueRequested": false,
+                                                                "leftHandSide": {
+                                                                    "expression": {
+                                                                        "id": 64,
+                                                                        "name": "state",
+                                                                        "nodeType": "Identifier",
+                                                                        "overloadedDeclarations": [],
+                                                                        "referencedDeclaration": 44,
+                                                                        "src": "949:5:0",
+                                                                        "typeDescriptions": {
+                                                                            "typeIdentifier": "t_struct$_BiddingState_$40_memory_ptr",
+                                                                            "typeString": "struct PokerRound.BiddingState memory"
+                                                                        }
+                                                                    },
+                                                                    "id": 66,
+                                                                    "isConstant": false,
+                                                                    "isLValue": true,
+                                                                    "isPure": false,
+                                                                    "lValueRequested": true,
+                                                                    "memberName": "currentBet",
+                                                                    "nodeType": "MemberAccess",
+                                                                    "referencedDeclaration": 37,
+                                                                    "src": "949:16:0",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_uint256",
+                                                                        "typeString": "uint256"
+                                                                    }
+                                                                },
+                                                                "nodeType": "Assignment",
+                                                                "operator": "+=",
+                                                                "rightHandSide": {
+                                                                    "id": 67,
+                                                                    "name": "betSize",
+                                                                    "nodeType": "Identifier",
+                                                                    "overloadedDeclarations": [],
+                                                                    "referencedDeclaration": 50,
+                                                                    "src": "969:7:0",
+                                                                    "typeDescriptions": {
+                                                                        "typeIdentifier": "t_uint256",
+                                                                        "typeString": "uint256"
+                                                                    }
+                                                                },
+                                                                "src": "949:27:0",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_uint256",
+                                                                    "typeString": "uint256"
+                                                                }
+                                                            },
+                                                            "id": 69,
+                                                            "nodeType": "ExpressionStatement",
+                                                            "src": "949:27:0"
+                                                        },
+                                                        {
+                                                            "expression": {
+                                                                "components": [
+                                                                    {
+                                                                        "expression": {
+                                                                            "id": 70,
+                                                                            "name": "action",
+                                                                            "nodeType": "Identifier",
+                                                                            "overloadedDeclarations": [],
+                                                                            "referencedDeclaration": 12,
+                                                                            "src": "997:6:0",
+                                                                            "typeDescriptions": {
+                                                                                "typeIdentifier": "t_type$_t_enum$_action_$12_$",
+                                                                                "typeString": "type(enum PokerRound.action)"
+                                                                            }
+                                                                        },
+                                                                        "id": 71,
+                                                                        "isConstant": false,
+                                                                        "isLValue": false,
+                                                                        "isPure": true,
+                                                                        "lValueRequested": false,
+                                                                        "memberName": "bet",
+                                                                        "nodeType": "MemberAccess",
+                                                                        "src": "997:10:0",
+                                                                        "typeDescriptions": {
+                                                                            "typeIdentifier": "t_enum$_action_$12",
+                                                                            "typeString": "enum PokerRound.action"
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "id": 72,
+                                                                "isConstant": false,
+                                                                "isInlineArray": false,
+                                                                "isLValue": false,
+                                                                "isPure": true,
+                                                                "lValueRequested": false,
+                                                                "nodeType": "TupleExpression",
+                                                                "src": "996:12:0",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_enum$_action_$12",
+                                                                    "typeString": "enum PokerRound.action"
+                                                                }
+                                                            },
+                                                            "functionReturnParameters": 48,
+                                                            "id": 73,
+                                                            "nodeType": "Return",
+                                                            "src": "990:18:0"
+                                                        }
+                                                    ]
+                                                },
+                                                "id": 75,
+                                                "nodeType": "IfStatement",
+                                                "src": "843:176:0",
+                                                "trueBody": {
+                                                    "id": 63,
+                                                    "nodeType": "Block",
+                                                    "src": "868:45:0",
+                                                    "statements": [
+                                                        {
+                                                            "expression": {
+                                                                "components": [
+                                                                    {
+                                                                        "expression": {
+                                                                            "id": 59,
+                                                                            "name": "action",
+                                                                            "nodeType": "Identifier",
+                                                                            "overloadedDeclarations": [],
+                                                                            "referencedDeclaration": 12,
+                                                                            "src": "889:6:0",
+                                                                            "typeDescriptions": {
+                                                                                "typeIdentifier": "t_type$_t_enum$_action_$12_$",
+                                                                                "typeString": "type(enum PokerRound.action)"
+                                                                            }
+                                                                        },
+                                                                        "id": 60,
+                                                                        "isConstant": false,
+                                                                        "isLValue": false,
+                                                                        "isPure": true,
+                                                                        "lValueRequested": false,
+                                                                        "memberName": "check",
+                                                                        "nodeType": "MemberAccess",
+                                                                        "src": "889:12:0",
+                                                                        "typeDescriptions": {
+                                                                            "typeIdentifier": "t_enum$_action_$12",
+                                                                            "typeString": "enum PokerRound.action"
+                                                                        }
+                                                                    }
+                                                                ],
+                                                                "id": 61,
+                                                                "isConstant": false,
+                                                                "isInlineArray": false,
+                                                                "isLValue": false,
+                                                                "isPure": true,
+                                                                "lValueRequested": false,
+                                                                "nodeType": "TupleExpression",
+                                                                "src": "888:14:0",
+                                                                "typeDescriptions": {
+                                                                    "typeIdentifier": "t_enum$_action_$12",
+                                                                    "typeString": "enum PokerRound.action"
+                                                                }
+                                                            },
+                                                            "functionReturnParameters": 48,
+                                                            "id": 62,
+                                                            "nodeType": "Return",
+                                                            "src": "882:20:0"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "id": 100,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "getPlayerAction",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 45,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 42,
+                                    "mutability": "mutable",
+                                    "name": "_position",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 100,
+                                    "src": "601:15:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint8",
+                                        "typeString": "uint8"
+                                    },
+                                    "typeName": {
+                                        "id": 41,
+                                        "name": "uint8",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "601:5:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint8",
+                                            "typeString": "uint8"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 44,
+                                    "mutability": "mutable",
+                                    "name": "state",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 100,
+                                    "src": "618:25:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_BiddingState_$40_memory_ptr",
+                                        "typeString": "struct PokerRound.BiddingState"
+                                    },
+                                    "typeName": {
+                                        "id": 43,
+                                        "name": "BiddingState",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 40,
+                                        "src": "618:12:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_BiddingState_$40_storage_ptr",
+                                            "typeString": "struct PokerRound.BiddingState"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "600:44:0"
+                        },
+                        "returnParameters": {
+                            "id": 48,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 47,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 100,
+                                    "src": "662:6:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_enum$_action_$12",
+                                        "typeString": "enum PokerRound.action"
+                                    },
+                                    "typeName": {
+                                        "id": 46,
+                                        "name": "action",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 12,
+                                        "src": "662:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_enum$_action_$12",
+                                            "typeString": "enum PokerRound.action"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "661:8:0"
+                        },
+                        "scope": 177,
+                        "src": "576:732:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 143,
+                            "nodeType": "Block",
+                            "src": "1379:282:0",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        108
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 108,
+                                            "mutability": "mutable",
+                                            "name": "sb",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 143,
+                                            "src": "1386:8:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint8",
+                                                "typeString": "uint8"
+                                            },
+                                            "typeName": {
+                                                "id": 107,
+                                                "name": "uint8",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1386:5:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint8",
+                                                    "typeString": "uint8"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 113,
+                                    "initialValue": {
+                                        "commonType": {
+                                            "typeIdentifier": "t_uint8",
+                                            "typeString": "uint8"
+                                        },
+                                        "id": 112,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftExpression": {
+                                            "expression": {
+                                                "id": 109,
+                                                "name": "state",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 102,
+                                                "src": "1397:5:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_BiddingState_$40_memory_ptr",
+                                                    "typeString": "struct PokerRound.BiddingState memory"
+                                                }
+                                            },
+                                            "id": 110,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "button",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 33,
+                                            "src": "1397:12:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint8",
+                                                "typeString": "uint8"
+                                            }
+                                        },
+                                        "nodeType": "BinaryOperation",
+                                        "operator": "+",
+                                        "rightExpression": {
+                                            "hexValue": "31",
+                                            "id": 111,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "number",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "1412:1:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_rational_1_by_1",
+                                                "typeString": "int_const 1"
+                                            },
+                                            "value": "1"
+                                        },
+                                        "src": "1397:16:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint8",
+                                            "typeString": "uint8"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1386:27:0"
+                                },
+                                {
+                                    "assignments": [
+                                        115
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 115,
+                                            "mutability": "mutable",
+                                            "name": "i",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 143,
+                                            "src": "1420:7:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint8",
+                                                "typeString": "uint8"
+                                            },
+                                            "typeName": {
+                                                "id": 114,
+                                                "name": "uint8",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1420:5:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint8",
+                                                    "typeString": "uint8"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 116,
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1420:7:0"
+                                },
+                                {
+                                    "assignments": [
+                                        118
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 118,
+                                            "mutability": "mutable",
+                                            "name": "currentPosition",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 143,
+                                            "src": "1434:21:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint8",
+                                                "typeString": "uint8"
+                                            },
+                                            "typeName": {
+                                                "id": 117,
+                                                "name": "uint8",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1434:5:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint8",
+                                                    "typeString": "uint8"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 119,
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1434:21:0"
+                                },
+                                {
+                                    "assignments": [
+                                        121
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 121,
+                                            "mutability": "mutable",
+                                            "name": "playerAction",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 143,
+                                            "src": "1462:19:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_enum$_action_$12",
+                                                "typeString": "enum PokerRound.action"
+                                            },
+                                            "typeName": {
+                                                "id": 120,
+                                                "name": "action",
+                                                "nodeType": "UserDefinedTypeName",
+                                                "referencedDeclaration": 12,
+                                                "src": "1462:6:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_enum$_action_$12",
+                                                    "typeString": "enum PokerRound.action"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 122,
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1462:19:0"
+                                },
+                                {
+                                    "assignments": [
+                                        124
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 124,
+                                            "mutability": "mutable",
+                                            "name": "roundNotClosed",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 143,
+                                            "src": "1488:19:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bool",
+                                                "typeString": "bool"
+                                            },
+                                            "typeName": {
+                                                "id": 123,
+                                                "name": "bool",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1488:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 125,
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1488:19:0"
+                                },
+                                {
+                                    "assignments": [
+                                        127
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 127,
+                                            "mutability": "mutable",
+                                            "name": "gameOver",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 143,
+                                            "src": "1514:13:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_bool",
+                                                "typeString": "bool"
+                                            },
+                                            "typeName": {
+                                                "id": 126,
+                                                "name": "bool",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1514:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 128,
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1514:13:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 132,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "id": 129,
+                                            "name": "currentPosition",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 118,
+                                            "src": "1535:15:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint8",
+                                                "typeString": "uint8"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "expression": {
+                                                "id": 130,
+                                                "name": "state",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 102,
+                                                "src": "1553:5:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_BiddingState_$40_memory_ptr",
+                                                    "typeString": "struct PokerRound.BiddingState memory"
+                                                }
+                                            },
+                                            "id": 131,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "currentPlayer",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 29,
+                                            "src": "1553:19:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint8",
+                                                "typeString": "uint8"
+                                            }
+                                        },
+                                        "src": "1535:37:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint8",
+                                            "typeString": "uint8"
+                                        }
+                                    },
+                                    "id": 133,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1535:37:0"
+                                },
+                                {
+                                    "body": {
+                                        "id": 138,
+                                        "nodeType": "Block",
+                                        "src": "1609:25:0",
+                                        "statements": [
+                                            {
+                                                "expression": {
+                                                    "id": 136,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "nodeType": "UnaryOperation",
+                                                    "operator": "++",
+                                                    "prefix": false,
+                                                    "src": "1622:3:0",
+                                                    "subExpression": {
+                                                        "id": 135,
+                                                        "name": "i",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 115,
+                                                        "src": "1622:1:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint8",
+                                                            "typeString": "uint8"
+                                                        }
+                                                    },
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint8",
+                                                        "typeString": "uint8"
+                                                    }
+                                                },
+                                                "id": 137,
+                                                "nodeType": "ExpressionStatement",
+                                                "src": "1622:3:0"
+                                            }
+                                        ]
+                                    },
+                                    "condition": {
+                                        "id": 134,
+                                        "name": "roundNotClosed",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 124,
+                                        "src": "1587:14:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "id": 139,
+                                    "nodeType": "WhileStatement",
+                                    "src": "1581:53:0"
+                                },
+                                {
+                                    "expression": {
+                                        "components": [
+                                            {
+                                                "id": 140,
+                                                "name": "gameOver",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 127,
+                                                "src": "1648:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            }
+                                        ],
+                                        "id": 141,
+                                        "isConstant": false,
+                                        "isInlineArray": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "TupleExpression",
+                                        "src": "1647:10:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "functionReturnParameters": 106,
+                                    "id": 142,
+                                    "nodeType": "Return",
+                                    "src": "1641:16:0"
+                                }
+                            ]
+                        },
+                        "id": 144,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "nextCard",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 103,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 102,
+                                    "mutability": "mutable",
+                                    "name": "state",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 144,
+                                    "src": "1328:25:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_struct$_BiddingState_$40_memory_ptr",
+                                        "typeString": "struct PokerRound.BiddingState"
+                                    },
+                                    "typeName": {
+                                        "id": 101,
+                                        "name": "BiddingState",
+                                        "nodeType": "UserDefinedTypeName",
+                                        "referencedDeclaration": 40,
+                                        "src": "1328:12:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_BiddingState_$40_storage_ptr",
+                                            "typeString": "struct PokerRound.BiddingState"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1327:27:0"
+                        },
+                        "returnParameters": {
+                            "id": 106,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 105,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 144,
+                                    "src": "1372:4:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                    },
+                                    "typeName": {
+                                        "id": 104,
+                                        "name": "bool",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1372:4:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1371:6:0"
+                        },
+                        "scope": 177,
+                        "src": "1310:351:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 175,
+                            "nodeType": "Block",
+                            "src": "1737:128:0",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        153
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 153,
+                                            "mutability": "mutable",
+                                            "name": "noOfPlayers",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 175,
+                                            "src": "1744:16:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 152,
+                                                "name": "uint",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1744:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 156,
+                                    "initialValue": {
+                                        "expression": {
+                                            "id": 154,
+                                            "name": "players",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 147,
+                                            "src": "1763:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_array$_t_struct$_Player_$21_calldata_ptr_$dyn_calldata_ptr",
+                                                "typeString": "struct PokerRound.Player calldata[] calldata"
+                                            }
+                                        },
+                                        "id": 155,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberName": "length",
+                                        "nodeType": "MemberAccess",
+                                        "src": "1763:14:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1744:33:0"
+                                },
+                                {
+                                    "assignments": [
+                                        158
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 158,
+                                            "mutability": "mutable",
+                                            "name": "i",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 175,
+                                            "src": "1784:7:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint8",
+                                                "typeString": "uint8"
+                                            },
+                                            "typeName": {
+                                                "id": 157,
+                                                "name": "uint8",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1784:5:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint8",
+                                                    "typeString": "uint8"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 159,
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1784:7:0"
+                                },
+                                {
+                                    "body": {
+                                        "id": 170,
+                                        "nodeType": "Block",
+                                        "src": "1834:8:0",
+                                        "statements": []
+                                    },
+                                    "condition": {
+                                        "commonType": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        },
+                                        "id": 166,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftExpression": {
+                                            "id": 164,
+                                            "name": "i",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 158,
+                                            "src": "1808:1:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint8",
+                                                "typeString": "uint8"
+                                            }
+                                        },
+                                        "nodeType": "BinaryOperation",
+                                        "operator": "<",
+                                        "rightExpression": {
+                                            "id": 165,
+                                            "name": "noOfPlayers",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 153,
+                                            "src": "1812:11:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "1808:15:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "id": 171,
+                                    "initializationExpression": {
+                                        "expression": {
+                                            "id": 162,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "leftHandSide": {
+                                                "id": 160,
+                                                "name": "i",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 158,
+                                                "src": "1803:1:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint8",
+                                                    "typeString": "uint8"
+                                                }
+                                            },
+                                            "nodeType": "Assignment",
+                                            "operator": "=",
+                                            "rightHandSide": {
+                                                "hexValue": "30",
+                                                "id": 161,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "number",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "1805:1:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_rational_0_by_1",
+                                                    "typeString": "int_const 0"
+                                                },
+                                                "value": "0"
+                                            },
+                                            "src": "1803:3:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint8",
+                                                "typeString": "uint8"
+                                            }
+                                        },
+                                        "id": 163,
+                                        "nodeType": "ExpressionStatement",
+                                        "src": "1803:3:0"
+                                    },
+                                    "loopExpression": {
+                                        "expression": {
+                                            "id": 168,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "nodeType": "UnaryOperation",
+                                            "operator": "++",
+                                            "prefix": false,
+                                            "src": "1825:3:0",
+                                            "subExpression": {
+                                                "id": 167,
+                                                "name": "i",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 158,
+                                                "src": "1825:1:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint8",
+                                                    "typeString": "uint8"
+                                                }
+                                            },
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint8",
+                                                "typeString": "uint8"
+                                            }
+                                        },
+                                        "id": 169,
+                                        "nodeType": "ExpressionStatement",
+                                        "src": "1825:3:0"
+                                    },
+                                    "nodeType": "ForStatement",
+                                    "src": "1798:44:0"
+                                },
+                                {
+                                    "expression": {
+                                        "components": [
+                                            {
+                                                "hexValue": "74727565",
+                                                "id": 172,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "bool",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "1856:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                },
+                                                "value": "true"
+                                            }
+                                        ],
+                                        "id": 173,
+                                        "isConstant": false,
+                                        "isInlineArray": false,
+                                        "isLValue": false,
+                                        "isPure": true,
+                                        "lValueRequested": false,
+                                        "nodeType": "TupleExpression",
+                                        "src": "1855:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "functionReturnParameters": 151,
+                                    "id": 174,
+                                    "nodeType": "Return",
+                                    "src": "1848:13:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "e70a049d",
+                        "id": 176,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "playRound",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 148,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 147,
+                                    "mutability": "mutable",
+                                    "name": "players",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 176,
+                                    "src": "1688:25:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "calldata",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_array$_t_struct$_Player_$21_calldata_ptr_$dyn_calldata_ptr",
+                                        "typeString": "struct PokerRound.Player[]"
+                                    },
+                                    "typeName": {
+                                        "baseType": {
+                                            "id": 145,
+                                            "name": "Player",
+                                            "nodeType": "UserDefinedTypeName",
+                                            "referencedDeclaration": 21,
+                                            "src": "1688:6:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Player_$21_storage_ptr",
+                                                "typeString": "struct PokerRound.Player"
+                                            }
+                                        },
+                                        "id": 146,
+                                        "nodeType": "ArrayTypeName",
+                                        "src": "1688:8:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_array$_t_struct$_Player_$21_storage_$dyn_storage_ptr",
+                                            "typeString": "struct PokerRound.Player[]"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1687:27:0"
+                        },
+                        "returnParameters": {
+                            "id": 151,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 150,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 176,
+                                    "src": "1730:4:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_bool",
+                                        "typeString": "bool"
+                                    },
+                                    "typeName": {
+                                        "id": 149,
+                                        "name": "bool",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1730:4:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_bool",
+                                            "typeString": "bool"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1729:6:0"
+                        },
+                        "scope": 177,
+                        "src": "1669:196:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 178,
+                "src": "98:1769:0"
+            }
+        ],
+        "src": "40:1829:0"
+    },
+    "functionHashes": {
+        "playRound(PokerRound.Player[])": "e70a049d"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "61600",
+            "executionCost": "136",
+            "totalCost": "61736"
+        },
+        "external": {
+            "playRound(PokerRound.Player[])": "infinite"
+        },
+        "internal": {
+            "getPlayerAction(uint8,struct PokerRound.BiddingState memory)": "infinite",
+            "nextCard(struct PokerRound.BiddingState memory)": "infinite"
+        }
+    }
+}

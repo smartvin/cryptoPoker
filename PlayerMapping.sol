@@ -99,6 +99,24 @@ struct arrayOfPlayers
         return (true, self.playerByAddress[key].player);
     }
 
+    function getNextActivePlayer(Player[] memory players, uint8 currentPlayer) internal view returns(int)
+    {
+        uint8 noOfPlayers = uint8(players.length);
+        uint8 currentPlayerIndex;
+        int r = -1;
+        uint8 i;
+
+        for (i = currentPlayer + 1; i  < int(noOfPlayers + currentPlayer + 1); i++)
+        {
+            currentPlayerIndex = uint8(i) % noOfPlayers;
+            if (players[currentPlayerIndex].folded == false)
+            {
+                r = int(currentPlayerIndex);
+                break;
+            }
+        }
+        return(r);
+    }
     
     function contains(Players storage self, address key) internal view returns (bool) {
         return self.playerByAddress[key].keyIndex > 0;
